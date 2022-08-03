@@ -9,11 +9,8 @@ pipeline{
         stage('test'){
              steps {
               sh 'kubectl get service/azure-vote-front'
-
-          }
-
-
+               }
+           }
         }
-       }
     }
 }
