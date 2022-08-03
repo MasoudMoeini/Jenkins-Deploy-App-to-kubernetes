@@ -83,3 +83,21 @@ spec:
   - port: 80
   selector:
     app: azure-vote-front
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: azure-vote-front
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: azure-vote-app-host.info
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: wordpress
+                port:
+                  number: 80

@@ -9,6 +9,7 @@ pipeline{
         stage('test service exists'){
              steps {
               sh 'kubectl get service/azure-vote-front'
+              sh 'kubectl get ingress'
                }
            }
     }
