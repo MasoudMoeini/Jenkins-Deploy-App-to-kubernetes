@@ -5,7 +5,7 @@ pipeline{
       steps {
            steps {
         script {
-          kubernetesDeploy(configs: "azure-vote.yml", kubeconfigId: "kubernetes08")
+          kubernetesDeploy(configs: "azure-vote.yaml", kubeconfigId: "kubernetes08")
         }
 
      }
