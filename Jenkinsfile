@@ -6,6 +6,14 @@ pipeline{
              sh 'kubectl apply -f azure-vote.yaml'
     
             }
+        stage('test'){
+             steps {
+              sh 'kubectl get service/azure-vote-front'
+
+          }
+
+
+        }
        }
     }
 }
