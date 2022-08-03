@@ -98,6 +98,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: wordpress
+                name: azure-vote-front
                 port:
                   number: 80
