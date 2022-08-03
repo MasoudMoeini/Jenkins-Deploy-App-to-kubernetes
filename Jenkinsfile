@@ -13,7 +13,7 @@ pipeline{
            }
         stage('get ingress'){
             steps{
-            sh 'kubectl get ingress azure-vote-front'
+            sh 'kubectl get ingress azure-vote-ingress'
             }
         }
     }

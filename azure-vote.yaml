@@ -81,6 +81,7 @@ spec:
   type: LoadBalancer
   ports:
   - port: 80
+  - targetPort: 80
   selector:
     app: azure-vote-front
 ---
@@ -97,7 +98,6 @@ spec:
           - path: /
             pathType: Prefix
             backend:
-              service:
-                name: azure-vote-front
-                port:
-                  number: 80
+              serviceName: azure-vote-front
+              servicePort: 80
+           
