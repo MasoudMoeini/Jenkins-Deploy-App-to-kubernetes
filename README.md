@@ -52,13 +52,16 @@ docker rm -f nodeJs
 Create repository in [docker hub](https://hub.docker.com/)
 ```
 docker tag hello-js-app:01  <your docker hub repository perfix eg. masodatc>/nodejs-app:01 
-docker push masodatc/nodejs-app:01
+```
+```
 docker tag hello-js-app:01 masodatc/nodejs-app:01 
 docker push masodatc/nodejs-app:01 
 ```
 Test pushed image to docker hub
 ``` 
 docker run -d --rm -p 3000:3000 --name nodeJs masodatc/nodejs-app:01
+```
+## Set up Jenkins Pipeline
 ```
 Dashboard -> Build Now
 ```
