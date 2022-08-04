@@ -12,8 +12,7 @@ You need to copy the kubententes config file contents to empty box
 ```
 cat ~/.kube/config 
 ```
-Copy and submit your new ceredential 
-```
+Copy and submit your new ceredential<br/> 
 Go back to Dashboard 
 ```
 Jenkins Dashboard-> new Item-> Pipline->Configure
@@ -23,9 +22,8 @@ Jenkins Dashboard-> new Item-> Pipline->Configure
 Dashboard -> Build Now
 ```
 You shoud be able to see something similar on your dashboard<br/>
-<img width="782" alt="Screenshot 2022-08-04 at 10 11 10" src="https://user-images.githubusercontent.com/43514418/182798420-13839b2e-9914-44c3-a13c-d44d5b87497c.png">
-
-Anytime missing Jenkins on browser run:
+<img width="782" alt="Screenshot 2022-08-04 at 10 11 10" src="https://user-images.githubusercontent.com/43514418/182798420-13839b2e-9914-44c3-a13c-d44d5b87497c.png"><br>
+Anytime missing Jenkins on browser run
 ```
 brew services restart jenkins-lts
 ```
