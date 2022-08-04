@@ -1,21 +1,26 @@
 pipeline{
     agent any
      stages {
-        stage('Deploy Azur vote Application to kubernetes') {
+        stage('Build docker image'){
+            steps{
+                sh 'docker build -t masodatc/nodejs-app:01 .'
+            }
+        }
+        stage('Pushing image'){
+            steps{
+            sh 'docker push masodatc/nodejs-app:01 '
+            }
+        }
+        stage('Deploy Node App to kubernetes cluster') {
           steps {
-             sh 'kubectl apply -f azure-vote.yaml'
+             sh 'kubectl apply -f node-app.yaml'
             }
         }
         stage('test service exists'){
              steps {
-              sh 'kubectl get service/azure-vote-front'
+              sh 'kubectl get service/node-app-svc'
                }
            }
-        stage('get ingress'){
-            steps{
-            sh 'kubectl get ingress azure-vote-ingress'
-            }
-        }
     }
 }
 
