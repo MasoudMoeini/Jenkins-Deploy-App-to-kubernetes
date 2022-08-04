@@ -49,8 +49,9 @@ or
 docker rm -f nodeJs
 ```
 ### Publishing app docker image to docker hub
+Create repository in [docker hub](https://hub.docker.com/)
 ```
-docker tag hello-js-app:01  <your [docker hub](https://hub.docker.com/) repository perfix eg. masodatc>/nodejs-app:01 
+docker tag hello-js-app:01  <your docker hub repository perfix eg. masodatc>/nodejs-app:01 
 docker push masodatc/nodejs-app:01
 docker tag hello-js-app:01 masodatc/nodejs-app:01 
 docker push masodatc/nodejs-app:01 
