@@ -25,6 +25,12 @@ Install node js on macOS from [here](https://nodejs.org/en/download/)
 sudo npm install npm --global 
 ```
 ```
+npm init
+```
+```
+npm i express mongoose
+```
+```
 node app.js
 ```
 You may see application running  on http://0.0.0.0:3000/ <br>
