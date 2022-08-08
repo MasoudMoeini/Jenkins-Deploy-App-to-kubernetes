@@ -1,0 +1,8 @@
+config.txt
+node_modules/
+.env
+Dockerfile
+Jenkinsfile
+node-app.yaml
+README.md 
+review.txt 

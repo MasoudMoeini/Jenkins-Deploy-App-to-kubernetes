@@ -1,6 +1,6 @@
 FROM node:latest
 
-WORKDIR /Jenkins-Deploy-App-to-kubernetes
-COPY app.js ./
+WORKDIR /app 
+COPY app.js ./app
 EXPOSE 3000
 CMD [ "node", "app.js" ]
