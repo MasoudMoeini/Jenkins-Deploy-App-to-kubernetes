@@ -29,7 +29,10 @@ sudo npm install npm --global
 npm init
 ```
 ```
-npm i express mongoose
+npm i express
+```
+```
+npm install mongoose --save
 ```
 ```
 npm install dotenv
