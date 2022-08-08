@@ -46,17 +46,17 @@ node server.js
 You may see application running  on http://0.0.0.0:3000/ <br>
 ### Building Docker image from app
 ```
-docker build -t hello-js-app:01 . 
+docker build -t rest-js-app:01 . 
 ```
 To check image 
 ```
-docker run -it --rm --name nodeJs hello-js-app:01 bash
+docker run -it --rm --name restNodeJs rest-js-app:01 bash
 ```
 To test builded image locally 
 ```
-docker run --rm -p 3000:3000 --name nodeJs hello-js-app:01 
+docker run --rm -p 3000:3000 --name restNodeJs rest-js-app:01
 or 
-docker run -d --rm -p 3000:3000 --name nodeJs hello-js-app:01
+docker run -d --rm -p 3000:3000 --name restNodeJs rest-js-app:01
 ```
 To stop or remove container
 ```
@@ -67,15 +67,18 @@ docker rm -f nodeJs
 ### Publishing app docker image to docker hub
 Create repository in [docker hub](https://hub.docker.com/)
 ```
-docker tag hello-js-app:01  <your docker hub repository perfix eg. masodatc>/nodejs-app:01 
+docker tag rest-js-app:01  masodatc/rest-api-nodejs:01 
 ```
 ```
-docker tag hello-js-app:01 masodatc/nodejs-app:01 
-docker push masodatc/nodejs-app:01 
+docker push masodatc/rest-api-nodejs:01
 ```
 Test pushed image to docker hub
+```
+docker run --rm -p 3000:3000 --name restNodeJs masodatc/rest-api-nodejs:01
+```
+or
 ``` 
-docker run -d --rm -p 3000:3000 --name nodeJs masodatc/nodejs-app:01
+docker run -d --rm -p 3000:3000 --name restNodeJs masodatc/rest-api-nodejs:01
 ```
 ## Set up Jenkins Pipeline
 ```
