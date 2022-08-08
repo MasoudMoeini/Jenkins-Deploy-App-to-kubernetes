@@ -34,7 +34,10 @@ npm i express mongoose
 ```
 npm install dotenv
 ```
+To run application
 ```
+npm run devStart
+or
 node server.js
 ```
 You may see application running  on http://0.0.0.0:3000/ <br>

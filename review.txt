@@ -6,3 +6,5 @@ docker tag example-app:01 masodatc/example-app:01 \
 docker push masodatc/example-app:01 \
 docker run -it --rm --name example-container masodatc/example-app:01 bash \
 ```
+
+
