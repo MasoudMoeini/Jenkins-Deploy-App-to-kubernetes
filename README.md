@@ -20,6 +20,7 @@ Jenkins Dashboard-> new Item-> Pipline->Configure
 ->Pipline script from SCM->Git -> branch /NodeJs-App
 ```
 ## Set up Node Js application
+[Code Reference](https://github.com/WebDevSimplified/Your-First-Node-REST-API)<br/>
 Install node js on macOS from [here](https://nodejs.org/en/download/)
 ```
 sudo npm install npm --global 
@@ -31,7 +32,10 @@ npm init
 npm i express mongoose
 ```
 ```
-node app.js
+npm install dotenv
+```
+```
+node server.js
 ```
 You may see application running  on http://0.0.0.0:3000/ <br>
 ### Building Docker image from app
