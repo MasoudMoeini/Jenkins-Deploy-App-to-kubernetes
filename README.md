@@ -72,3 +72,10 @@ Anytime missing Jenkins on browser run
 ```
 brew services restart jenkins-lts
 ```
+Clean up resources
+```
+kubectl delete deploy node-js-app
+```
+Kubectl delete service node-app-svc
+```
+
