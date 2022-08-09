@@ -6,7 +6,7 @@ const hostname = '0.0.0.0';
 const port = process.env.PORT || 3000;
 
 //Set up default mongoose connection
-var mongoDB = 'mongodb://0.0.0.0:27017/my_database';
+var mongoDB = 'mongodb://127.0.0.1:27017/my_database';
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 //Get the default connection
 var db = mongoose.connection;

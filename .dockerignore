@@ -1,7 +1,5 @@
 config.txt
 node_modules/
-package.json
-package-lock.json
 review.txt
 route.rest
 Jenkinsfile
