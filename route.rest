@@ -13,3 +13,13 @@ Content-Type: application/json
   "name": "Amazing Person",
   "subscribedToChannel": "Web Dev Simplified"
 }
+### 
+PATCH http://127.0.0.1:3000/subscribers/62f234f28e04f55f2078ac7c
+Content-Type: application/json
+
+{
+  "name": "Well-Known Person",
+  "subscribedToChannel": "Cloud Developper"
+}
+### 
+DELETE http://127.0.0.1:3000/subscribers/62f234f28e04f55f2078ac7c
