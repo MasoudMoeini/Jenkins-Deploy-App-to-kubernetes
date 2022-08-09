@@ -1,0 +1,13 @@
+version: '3'
+services:
+  myapplication:
+    image: masodatc/rest-api-nodejs:01
+    environment: 
+      - MONGODB_CONNSTRING=mongodb://node-app-user:mypass2@mongodb
+    ports:
+      - 3000:3000
+  mongodb:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=node-app-user
+      - MONGO_INITDB_ROOT_PASSWORD=mypass2

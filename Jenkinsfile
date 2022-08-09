@@ -11,16 +11,17 @@ pipeline{
             sh 'docker push masodatc/rest-api-nodejs:01 '
             }
         }
-        stage('Deploy Node App to kubernetes cluster') {
-          steps {
-             sh 'kubectl apply -f rest-node-app.yaml'
+        stage('Deploy Node App with docker compose'){
+            steps{
+                sh 'docker-compose up --detach'
             }
         }
-        stage('test service exists'){
-             steps {
-              sh 'kubectl get service/rest-node-app-svc'
-               }
-           }
+        stage('Stop docker compose and remove containers'){
+            steps{
+                sh 'docker compose down'
+            }
+        }
+       
     }
 }
 

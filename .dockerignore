@@ -6,3 +6,4 @@ Jenkinsfile
 Dockerfile
 README.md
 rest-node-app.yaml
+kubernetes_deployment/

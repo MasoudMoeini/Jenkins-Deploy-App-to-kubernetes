@@ -4,10 +4,10 @@ const app = express()
 const mongoose = require('mongoose')
 const hostname = '0.0.0.0';
 const port = process.env.PORT || 3000;
+const connString = process.env.MONGODB_CONNSTRING || 'mongodb://127.0.0.1:27017/my_database';
 
 //Set up default mongoose connection
-var mongoDB = 'mongodb://127.0.0.1:27017/my_database'
-mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(connString, {useNewUrlParser: true, useUnifiedTopology: true});
 //Get the default connection
 var db = mongoose.connection;
 

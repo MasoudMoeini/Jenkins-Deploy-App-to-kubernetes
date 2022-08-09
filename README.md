@@ -60,34 +60,18 @@ npm run devStart
 or
 node server.js
 ```
-You may see application running  on http://0.0.0.0:3000/ <br>
+```
+Install Rest Client extension on VS-Code
+```
+You may test rest api application on route.rest file or by Postman <br>
 ### Building Docker image from app
 ```
-docker build -t rest-js-app:01 . 
-```
-To check image 
-```
-docker run -it --rm --name restNodeJs rest-js-app:01 bash
-```
-To test builded image locally 
-```
-docker run --rm -p 3000:3000 --name restNodeJs rest-js-app:01
-or 
-docker run -d --rm -p 3000:3000 --name restNodeJs rest-js-app:01
-```
-To stop or remove container
-```
-docker stop nodeJs
-or 
-docker rm -f nodeJs
+docker build -t masodatc/rest-api-nodejs:01 .
 ```
 ### Publishing app docker image to docker hub
-Create repository in [docker hub](https://hub.docker.com/)
+Create repository in [docker hub](https://hub.docker.com/)<br>
 ```
-docker tag rest-js-app:01  masodatc/rest-api-nodejs:01 
-```
-```
-docker push masodatc/rest-api-nodejs:01
+docker push masodatc/rest-api-nodejs:01 
 ```
 Test pushed image to docker hub
 ```
@@ -97,13 +81,16 @@ or
 ``` 
 docker run -d --rm -p 3000:3000 --name restNodeJs masodatc/rest-api-nodejs:01
 ```
-## Set UP Kubernetes Deployment 
+## Set UP Docker Compose 
+[Reference:Docker and MongoDB](https://www.mongodb.com/compatibility/docker)<br>
+[Reference:docker compose](https://docs.docker.com/compose/gettingstarted/)<br>
 ```
-kubectl apply -k ./
+docker-compose up --detach  
 ```
-Testing mongobd image
+You may test rest api application on route.rest file or by Postman <br>
+Stop docker compose and remove containers<br>
 ```
-docker run -d -p 27017:27017 --name mongodb -e MYDB_ROOT_PASSWORD=mongodb-pass mongo
+docker compose down 
 ```
 ## Set up Jenkins Pipeline
 ```
@@ -115,15 +102,4 @@ You shoud be able to see something similar on your dashboard<br/>
 Anytime missing Jenkins on browser run
 ```
 brew services restart jenkins-lts
-```
-Clean up resources
-```
-kubectl delete deploy rest-node-js-app
-```
-```
-Kubectl delete service rest-node-app-svc
-```
-or simply
-```
-kubectl delete -k ./
 ```
