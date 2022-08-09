@@ -17,6 +17,14 @@ spec:
       containers:
       - name: restnodejs
         image: masodatc/rest-api-nodejs:01
+        env:
+        - name: RESTNODE_DB_HOST
+          value: restnode-mongodb
+        - name: RESTNODE_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-pass
+              key: password
         ports:
         - containerPort: 3000
 ---
@@ -31,3 +39,4 @@ spec:
   ports:
     - port: 3000 #this is the external port
       targetPort: 3000 #this port must be the same with container port
+

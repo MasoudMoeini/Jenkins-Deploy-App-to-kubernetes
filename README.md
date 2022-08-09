@@ -97,6 +97,14 @@ or
 ``` 
 docker run -d --rm -p 3000:3000 --name restNodeJs masodatc/rest-api-nodejs:01
 ```
+## Set UP Kubernetes Deployment 
+```
+kubectl apply -k ./
+```
+Testing mongobd image
+```
+docker run -d -p 27017:27017 --name mongodb -e MYDB_ROOT_PASSWORD=mongodb-pass mongo
+```
 ## Set up Jenkins Pipeline
 ```
 Dashboard -> Build Now
@@ -114,4 +122,8 @@ kubectl delete deploy rest-node-js-app
 ```
 ```
 Kubectl delete service rest-node-app-svc
+```
+or simply
+```
+kubectl delete -k ./
 ```

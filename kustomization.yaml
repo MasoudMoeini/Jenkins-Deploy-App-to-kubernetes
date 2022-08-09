@@ -1,0 +1,7 @@
+secretGenerator:
+- name: mongodb-pass
+  literals:
+  - password=Hamburg2022
+resources:
+  - rest-node-app-deployment.yaml
+  - mongodb-deployment.yaml
