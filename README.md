@@ -1,5 +1,5 @@
 # Deploy Applications to kubernetes with Jenkins Pipeline: Node Js App
-[Node wesite](https://nodejs.org/en/docs/guides/getting-started-guide/)<br>
+[Node Website](https://nodejs.org/en/docs/guides/getting-started-guide/)<br>
 In order to deploy kubernetes deployment infraustruture using Jenkins Pipeline<br/>
 First set up Kubernetes plug in on Jenkins <br/>
 ```
@@ -81,7 +81,7 @@ or
 ``` 
 docker run -d --rm -p 3000:3000 --name restNodeJs masodatc/rest-api-nodejs:01
 ```
-## Set UP Docker Compose 
+## Set up Docker Compose 
 [Reference:Docker and MongoDB](https://www.mongodb.com/compatibility/docker)<br>
 [Reference:docker compose](https://docs.docker.com/compose/gettingstarted/)<br>
 ```
