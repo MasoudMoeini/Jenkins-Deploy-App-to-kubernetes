@@ -19,6 +19,22 @@ Go back to Dashboard
 Jenkins Dashboard-> new Item-> Pipline->Configure
 ->Pipline script from SCM->Git -> branch /NodeJs-App
 ```
+## Set up MongoDB on macOS
+[Reference](https://github.com/mongodb/homebrew-brew)
+```
+brew tap mongodb/brew
+```
+```
+brew install mongodb-community
+```
+To start running mongo DB
+```
+brew services start mongodb/brew/mongodb-community
+```
+To stop running mongo DB 
+```
+brew services stop mongodb-community
+```
 ## Set up Node Js application
 [Code Reference](https://github.com/WebDevSimplified/Your-First-Node-REST-API)<br/>
 Install node js on macOS from [here](https://nodejs.org/en/download/)

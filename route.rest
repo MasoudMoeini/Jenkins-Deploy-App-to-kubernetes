@@ -1,5 +1,9 @@
 GET http://127.0.0.1:3000/subscribers
 
+### 
+GET http://127.0.0.1:3000/subscribers/
+62f233608e04f55f2078ac72
+
 ###
  
 POST http://127.0.0.1:3000/subscribers
