@@ -13,7 +13,7 @@ GET http://127.0.0.1:3000/subscribers/
 62f234f28e04f55f2078ac7c
 
 ### 
-PATCH http://127.0.0.1:3000/subscribers/62f234f28e04f55f2078ac7c
+PATCH http://127.0.0.1:3000/subscribers/62f3666457adb8eaf41047e1
 Content-Type: application/json
 
 {
@@ -21,4 +21,4 @@ Content-Type: application/json
   "subscribedToChannel": "Cloud Developper"
 }
 ### 
-DELETE http://127.0.0.1:3000/subscribers/62f234f28e04f55f2078ac7c
+DELETE http://127.0.0.1:3000/subscribers/62f3666457adb8eaf41047e1

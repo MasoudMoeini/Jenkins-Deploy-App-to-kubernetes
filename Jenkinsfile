@@ -11,16 +11,7 @@ pipeline{
             sh 'docker push masodatc/rest-api-nodejs:01 '
             }
         }
-        stage('Deploy Node App with docker compose'){
-            steps{
-                sh 'docker-compose up --detach'
-            }
-        }
-        stage('Stop docker compose and remove containers'){
-            steps{
-                sh 'docker compose down'
-            }
-        }
+        
        
     }
 }
