@@ -18,8 +18,13 @@ spec:
       - name: restnodejs
         image: masodatc/rest-api-nodejs:01
         env:
-        - name: RESTNODE_DB_HOST
-          value: restnode-mongodb
+        - name: RESTNODE_DB_HOST 
+          value: localhost
+        - name: RESTNODE_DB_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-pass
+              key: username
         - name: RESTNODE_DB_PASSWORD
           valueFrom:
             secretKeyRef:
