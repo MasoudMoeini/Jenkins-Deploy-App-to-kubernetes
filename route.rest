@@ -1,4 +1,4 @@
-GET http://127.0.0.1:3000/subscribers
+GET http://0.0.0.0:32061/subscribers
 
 ###
 POST http://127.0.0.1:3000/subscribers
@@ -21,4 +21,4 @@ Content-Type: application/json
   "subscribedToChannel": "Cloud Developper"
 }
 ### 
-DELETE http://127.0.0.1:3000/subscribers/62f3666457adb8eaf41047e1
+DELETE http://127.0.0.1:3000/subscribers/62f4c5f8bd0e381a354afe75

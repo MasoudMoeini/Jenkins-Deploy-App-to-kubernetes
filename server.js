@@ -4,7 +4,14 @@ const app = express()
 const mongoose = require('mongoose')
 const hostname = '0.0.0.0';
 const port = process.env.PORT || 3000;
-const connString = process.env.MONGODB_CONNSTRING || 'mongodb://127.0.0.1:27017/my_database';
+
+const mongoUser= process.env.RESTNODE_DB_USERNAME || ''
+const mongoPass= process.env.RESTNODE_DB_PASSWORD || ''
+const mongoAuth = mongoUser && mongoPass ? `${mongoUser}:${mongoPass}@` : ''
+const mongoHost= process.env.RESTNODE_DB_HOST || 'localhost'
+const mongoPort = process.env.MONGO_PORT || '27017'
+const mongoDb = process.env.MONGO_DB || 'my_database'
+const connString = process.env.MONGODB_CONNSTRING || `mongodb://${mongoAuth}${mongoHost}:${mongoPort}/${mongoDb}`;
 
 //Set up default mongoose connection
 mongoose.connect(connString, {useNewUrlParser: true, useUnifiedTopology: true});
