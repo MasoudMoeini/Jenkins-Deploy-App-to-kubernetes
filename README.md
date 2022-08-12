@@ -1,4 +1,4 @@
-# Deploy Applications to kubernetes with Jenkins Pipeline: Node Js App
+# Deploy Rest API Applications to kubernetes with Jenkins Pipeline: Node Js App
 [Node Website](https://nodejs.org/en/docs/guides/getting-started-guide/)<br>
 In order to deploy kubernetes deployment infraustruture using Jenkins Pipeline<br/>
 First set up Kubernetes plug in on Jenkins <br/>
@@ -92,6 +92,9 @@ Stop docker compose and remove containers<br>
 ```
 docker compose down 
 ```
+## Set up Kubernetes Manifest
+In folder kubernetes_deployment the configuration set up<br>
+For Deployment of Mangodb and Node Js app are available<br>
 ## Set up Jenkins Pipeline
 ```
 Dashboard -> Build Now
