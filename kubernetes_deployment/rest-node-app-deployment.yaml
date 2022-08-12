@@ -18,8 +18,9 @@ spec:
       - name: restnodejs
         image: masodatc/rest-api-nodejs:01
         env:
-        - name: MONGODB_CONNSTRING
-          value: 'mongodb://node-app-user:mypass2@mongodb-service:27017/mydatabase?authSource=admin'  
+       #MONGODB_CONNSTRING=mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}?authSource=admin
+        - name: RESTNODE_DB_HOST 
+          value: 'mongodb-service'  
         - name: RESTNODE_DB_USERNAME
           valueFrom:
             secretKeyRef:
