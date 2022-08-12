@@ -100,7 +100,8 @@ For Deployment of Mangodb and Node Js app are available<br>
 Dashboard -> Build Now
 ```
 You shoud be able to see something similar on your dashboard<br/>
-<img width="880" alt="Screenshot 2022-08-04 at 14 57 34" src="https://user-images.githubusercontent.com/43514418/182852723-06f185c2-e860-4471-9fd8-cba99d0e709a.png">
+<img width="778" alt="Screenshot 2022-08-12 at 11 10 13" src="https://user-images.githubusercontent.com/43514418/184323488-a10eea65-773b-4e00-a167-d65b0ef38803.png">
+
 <br>
 Anytime missing Jenkins on browser run
 ```
