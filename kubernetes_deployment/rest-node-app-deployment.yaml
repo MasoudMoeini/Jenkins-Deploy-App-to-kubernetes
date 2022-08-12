@@ -19,8 +19,8 @@ spec:
         image: masodatc/rest-api-nodejs:01
         env:
         - name: MONGODB_CONNSTRING
-          value: 'mongodb://node-app-user:mypass2@mongodb-service:27017/mydatabase?authSource=admin'
-          #value: 'mongodb://mongodb-service:27017/mydatabase'  
+          value: mongodb://${mongoAuth}mongodb-service:${mongoPort}/${mongoDb}?authSource=admin
+          #value: 'mongodb://node-app-user:mypass2@mongodb-service:27017/mydatabase?authSource=admin'  
         - name: RESTNODE_DB_USERNAME
           valueFrom:
             secretKeyRef:
