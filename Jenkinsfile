@@ -14,8 +14,7 @@ pipeline{
         
         stage('Deploy app to kubenetes'){
             steps{
-            sh 'cd kubernetes_deployment'
-            sh 'kubectl apply -k ./'
+            sh 'kubectl apply -k ./kubernetes_deployment/'
             sh 'kubectl get svc rest-node-app-svc'
             }
         }
