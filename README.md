@@ -57,7 +57,9 @@ npm install dotenv
 To run application
 ```
 npm run devStart
+```
 or
+```
 node server.js
 ```
 ```
@@ -100,9 +102,7 @@ For Deployment of Mongodb and Node Js app are available<br>
 Dashboard -> Build Now
 ```
 You shoud be able to see something similar on your dashboard<br/>
-<img width="778" alt="Screenshot 2022-08-12 at 11 10 13" src="https://user-images.githubusercontent.com/43514418/184323488-a10eea65-773b-4e00-a167-d65b0ef38803.png">
-
-<br>
+<img width="778" alt="Screenshot 2022-08-12 at 11 10 13" src="https://user-images.githubusercontent.com/43514418/184323488-a10eea65-773b-4e00-a167-d65b0ef38803.png"><br>
 Anytime missing Jenkins on browser run
 ```
 brew services restart jenkins-lts
